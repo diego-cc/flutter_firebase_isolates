@@ -20,6 +20,12 @@ Please see the comments in `lib/main.dart` for context.
 10. __iOS:__ Build and run the app via Xcode for the first time and allow it to sign your app and perform any further operations required. You may then stop the debugging session once your app is up and running.
 11. Run `flutter run`.
 
+## Reproducing [this crash](https://github.com/firebase/flutterfire/issues/6155 "[cloud_firestore] [__NSCFString setStreamHandler:]: unrecognized selector sent to instance 0x280d27d40 -[FLTFirebaseFirestorePlugin cleanupWithCompletion:]")
+
+1. Run the app
+2. Tap "Start Listening"
+3. Tap "Stop Listening"
+
 ## Conclusions
 
 - You must always call `Firebase.initializeApp(_)` inside your isolates, even if you've already initialised it in your main isolate.
