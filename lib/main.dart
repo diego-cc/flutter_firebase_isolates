@@ -117,12 +117,13 @@ void listenForChangesInFirestore(Map<String, dynamic> args) {
         'parsedMessage["terminate"] MUST be a boolean value!',
       );
 
-      final terminate = parsedMessage['terminate'] as bool;
+      /// Terminating FirebaseFirestore has no effect here
+      /* final terminate = parsedMessage['terminate'] as bool;
 
       if (terminate) {
         await FirebaseFirestore.instance.terminate();
         await FirebaseFirestore.instance.clearPersistence();
-      }
+      } */
     }
   });
 }
